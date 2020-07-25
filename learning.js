@@ -137,4 +137,74 @@ console.log(yourStr)
  console.log("First name is " + nameArray[0] +" and last name is " + nameArray[1])
  console.log("My full name is " + nameLength + " charatcters long.")
 
-// 
+// Getting letters from a string with index (0 based) using bracket [] notation
+ var firstLetterOfFirstName = "";
+ var firstName = "Sanjiv";
+
+ firstLetterOfFirstName = firstName[0];
+ var secondLetterOfFirstName = firstName[1];
+ console.log(firstLetterOfFirstName)
+ console.log(secondLetterOfFirstName)
+
+// String Immutability
+var myStr = "Jello World";
+console.log(myStr.replace(myStr[0], "H"))
+
+//Bracket notation to find nth character in a string
+var newStr = "This is a new character";
+console.log(newStr[(newStr.length)-1])
+
+//madlib word game
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + "." ; 
+    return result;
+}
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "black", "flew", "hastely"));
+
+//Storing multiple vlaues in an array and retriving 
+var myArray = ["Sanjiv", 42, "Working"];
+console.log(myArray)
+console.log(myArray[1])  // Retriving second element
+
+//Nested array or multidimensional array
+
+var nestedArray = [42, ["Sanjiv", "Mathur", "25-05-1978"], [15, "Kronos", "Yatra"], 6.3, "Manan", 244, "Wilson Drive"];
+var fullName = nestedArray[1][0] + " " + nestedArray[1][1];
+var kidsAge = nestedArray[3];
+var kidsFullName = nestedArray[4] + " " + nestedArray[1][1]
+console.log(fullName)
+console.log("My kid name is " + kidsFullName + " and he is " + kidsAge + " years old.")
+
+//Adding elements to an array using push() function, will append at the end
+var myArray = ["San", "man"];
+myArray.push("manan")
+console.log(myArray)
+var ourArray = ["Usha", "Sanjiv"];
+ourArray.push([39, 42])
+console.log(ourArray)
+
+// manipuling array with pop() function - removing an array, the last element from an array
+var ourArray = [1, 2, 3, 4];
+var removedFromOurArray = ourArray.pop();
+console.log(removedFromOurArray)
+console.log(ourArray)
+
+//Manipulating array with shift() function - similar to pop but it removes the first element of an array unlike the pop() that removes the last element
+var ourArray = ["Sanjiv", "San", ["Cat", 1], "Hello"]
+var shiftRemove = ourArray.shift();
+console.log(shiftRemove)
+console.log(ourArray)
+
+//manupulating array with unshift() function - similar to push() function, only the difference it unshift() add an element at the start of an array unlike push(), that ends at the end
+var myArray = ["Manan", "Mathur", ["Age", 6.3], ["Address", "244 Wilson Drive"], ["City", "Milton"]] ;
+console.log(myArray)
+myArray.unshift(["Father", "Sanjiv Mathur"]);
+console.log(myArray)
+
+//Functions allows us to make our code reusable
+function ourReusableFunction() {
+    console.log("Hello World, I am inside a function");
+}
+ourReusableFunction();
